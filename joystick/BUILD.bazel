@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "joystick",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//joystick/team0",
+        "//joystick/team1",
+        "//joystick/team2",
+        "//joystick/team3",
+        "//joystick/team4",
+        "//joystick/team5",
+        "//joystick/team6",
+        "//joystick/team7",
+        "//joystick/team8",
+        "//joystick/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

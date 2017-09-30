@@ -1,0 +1,16 @@
+
+import {NgModule} from '@angular/core';
+import {Cmp280Component} from './cmp0/cmp';
+import {Cmp281Component} from './cmp1/cmp';
+import {Cmp282Component} from './cmp2/cmp';
+import {Cmp283Component} from './cmp3/cmp';
+import {Cmp284Component} from './cmp4/cmp';
+import {Cmp285Component} from './cmp5/cmp';
+import {Cmp286Component} from './cmp6/cmp';
+import {Cmp287Component} from './cmp7/cmp';
+import {Cmp288Component} from './cmp8/cmp';
+import {Cmp289Component} from './cmp9/cmp';
+@NgModule({declarations: [Cmp280Component,Cmp281Component,Cmp282Component,Cmp283Component,Cmp284Component,Cmp285Component,Cmp286Component,Cmp287Component,Cmp288Component,Cmp289Component]})
+export class Module_airplane_team2_mod8 {}
+
+        

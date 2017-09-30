@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "experimentalDecorators": true,
+        "lib": ["es5", "dom", "es2015.collection", "es2015.promise"],
+        "types": ["node", "jasmine"]
+    }
+}

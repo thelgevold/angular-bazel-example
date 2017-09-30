@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "humanoid",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//humanoid/team0",
+        "//humanoid/team1",
+        "//humanoid/team2",
+        "//humanoid/team3",
+        "//humanoid/team4",
+        "//humanoid/team5",
+        "//humanoid/team6",
+        "//humanoid/team7",
+        "//humanoid/team8",
+        "//humanoid/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

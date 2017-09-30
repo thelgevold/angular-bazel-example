@@ -59,14 +59,18 @@
     typescript "2.4.x"
 
 "@bazel/typescript@alexeagle/rules_typescript#hacky_concat_serve":
-  version "0.1.0"
-  resolved "https://codeload.github.com/alexeagle/rules_typescript/tar.gz/b908c79e47a638832ae4a1f0dd5ab362f3979a01"
+  version "1.0.0-SNAPSHOT"
+  resolved "https://codeload.github.com/alexeagle/rules_typescript/tar.gz/c86a20356e2d162aa2653070ab393b7177185338"
   dependencies:
     "@types/node" "7.0.18"
     "@types/source-map" "^0.5.1"
     protobufjs "5.0.0"
     tsickle "0.24.x"
     typescript "2.4.x"
+
+"@types/jasmine@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.6.0.tgz#997b41a27752b4850af2683bc4a8d8222c25bd02"
 
 "@types/node@6.0.84":
   version "6.0.84"

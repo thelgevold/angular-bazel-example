@@ -1,0 +1,10 @@
+
+import {Component} from '@angular/core';
+@Component({
+    template: '<strong>557</strong>',
+})
+export class Cmp557Component {
+  add557(x: number) {
+    return x + 557;
+  }
+}

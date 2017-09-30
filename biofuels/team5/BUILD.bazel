@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+#load("@karma//:index.bzl", "karma_test")
+load("@angular//:index.bzl", "ng_module")
+
+ng_module(
+    name = "team5",
+    srcs = ["module.ts"],
+    deps = ["//biofuels/team5/mod0:mod0","//biofuels/team5/mod1:mod1","//biofuels/team5/mod2:mod2","//biofuels/team5/mod3:mod3","//biofuels/team5/mod4:mod4","//biofuels/team5/mod5:mod5","//biofuels/team5/mod6:mod6","//biofuels/team5/mod7:mod7","//biofuels/team5/mod8:mod8","//biofuels/team5/mod9:mod9"],
+    tsconfig = "//:tsconfig.json",
+)
+#karma_test(
+#    name = "unit_tests",
+#    deps = ["//biofuels/team5/mod0:mod0",
+#        "//biofuels/team5/mod1:mod1",
+#        "//biofuels/team5/mod2:mod2",
+#        "//biofuels/team5/mod3:mod3",
+#        "//biofuels/team5/mod4:mod4",
+#        "//biofuels/team5/mod5:mod5",
+#        "//biofuels/team5/mod6:mod6",
+#        "//biofuels/team5/mod7:mod7",
+#        "//biofuels/team5/mod8:mod8",
+#        "//biofuels/team5/mod9:mod9",
+#        # FIXME(alexeagle): doesn't belong here
+#        "@karma//internal/karma_concat_js",
+#    ],
+#    tags = ["local"]
+#)
+      

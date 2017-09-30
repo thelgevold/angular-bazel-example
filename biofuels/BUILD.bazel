@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "biofuels",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//biofuels/team0",
+        "//biofuels/team1",
+        "//biofuels/team2",
+        "//biofuels/team3",
+        "//biofuels/team4",
+        "//biofuels/team5",
+        "//biofuels/team6",
+        "//biofuels/team7",
+        "//biofuels/team8",
+        "//biofuels/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

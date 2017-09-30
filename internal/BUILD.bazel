@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "internal",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//internal/team0",
+        "//internal/team1",
+        "//internal/team2",
+        "//internal/team3",
+        "//internal/team4",
+        "//internal/team5",
+        "//internal/team6",
+        "//internal/team7",
+        "//internal/team8",
+        "//internal/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "flooring",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//flooring/team0",
+        "//flooring/team1",
+        "//flooring/team2",
+        "//flooring/team3",
+        "//flooring/team4",
+        "//flooring/team5",
+        "//flooring/team6",
+        "//flooring/team7",
+        "//flooring/team8",
+        "//flooring/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

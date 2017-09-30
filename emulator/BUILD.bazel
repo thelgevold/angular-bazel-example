@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "emulator",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//emulator/team0",
+        "//emulator/team1",
+        "//emulator/team2",
+        "//emulator/team3",
+        "//emulator/team4",
+        "//emulator/team5",
+        "//emulator/team6",
+        "//emulator/team7",
+        "//emulator/team8",
+        "//emulator/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

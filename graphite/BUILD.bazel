@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "graphite",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//graphite/team0",
+        "//graphite/team1",
+        "//graphite/team2",
+        "//graphite/team3",
+        "//graphite/team4",
+        "//graphite/team5",
+        "//graphite/team6",
+        "//graphite/team7",
+        "//graphite/team8",
+        "//graphite/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

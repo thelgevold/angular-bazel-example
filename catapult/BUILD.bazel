@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "catapult",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//catapult/team0",
+        "//catapult/team1",
+        "//catapult/team2",
+        "//catapult/team3",
+        "//catapult/team4",
+        "//catapult/team5",
+        "//catapult/team6",
+        "//catapult/team7",
+        "//catapult/team8",
+        "//catapult/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

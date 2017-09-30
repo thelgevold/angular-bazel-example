@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+#load("@karma//:index.bzl", "karma_test")
+load("@angular//:index.bzl", "ng_module")
+
+ng_module(
+    name = "team8",
+    srcs = ["module.ts"],
+    deps = ["//deforest/team8/mod0:mod0","//deforest/team8/mod1:mod1","//deforest/team8/mod2:mod2","//deforest/team8/mod3:mod3","//deforest/team8/mod4:mod4","//deforest/team8/mod5:mod5","//deforest/team8/mod6:mod6","//deforest/team8/mod7:mod7","//deforest/team8/mod8:mod8","//deforest/team8/mod9:mod9"],
+    tsconfig = "//:tsconfig.json",
+)
+#karma_test(
+#    name = "unit_tests",
+#    deps = ["//deforest/team8/mod0:mod0",
+#        "//deforest/team8/mod1:mod1",
+#        "//deforest/team8/mod2:mod2",
+#        "//deforest/team8/mod3:mod3",
+#        "//deforest/team8/mod4:mod4",
+#        "//deforest/team8/mod5:mod5",
+#        "//deforest/team8/mod6:mod6",
+#        "//deforest/team8/mod7:mod7",
+#        "//deforest/team8/mod8:mod8",
+#        "//deforest/team8/mod9:mod9",
+#        # FIXME(alexeagle): doesn't belong here
+#        "@karma//internal/karma_concat_js",
+#    ],
+#    tags = ["local"]
+#)
+      

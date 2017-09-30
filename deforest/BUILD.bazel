@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "deforest",
+    srcs = ["app.ts"],
+    deps = [
+        "//shared:logo",
+        "//deforest/team0",
+        "//deforest/team1",
+        "//deforest/team2",
+        "//deforest/team3",
+        "//deforest/team4",
+        "//deforest/team5",
+        "//deforest/team6",
+        "//deforest/team7",
+        "//deforest/team8",
+        "//deforest/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)

@@ -17,12 +17,14 @@
         "@angular/compiler": "5.0.0-rc.0",
         "@angular/compiler-cli": "5.0.0-rc.0",
         "@bazel/typescript": "alexeagle/rules_typescript#hacky_concat_serve",
+        "@types/jasmine": "^2.6.0",
         "concurrently": "^3.5.0",
         "lite-server": "^2.3.0",
         "protractor": "^5.1.2",
         "typescript": "~2.4.x"
     },
     "scripts": {
+        "generate": "tsc generate.ts && node generate.js",
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
         "preserve": "bazel build src && ./bundle.sh",
         "serve": "lite-server -c test/browser.config.json",
