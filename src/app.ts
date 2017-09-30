@@ -1,12 +1,14 @@
 import {HelloWorldModule} from './hello-world/hello-world.module';
-import {HelloWorldComponent} from './hello-world/hello-world.component';
+import {AppComponent} from './app.component';
 
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
-@NgModule({
+import {TreeviewModule} from './treeview/treeview.module';
 
-  imports: [BrowserModule, HelloWorldModule],
-  bootstrap: [HelloWorldComponent]
+@NgModule({
+  imports: [BrowserModule, HelloWorldModule, TreeviewModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

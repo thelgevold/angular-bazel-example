@@ -25,7 +25,7 @@
     "scripts": {
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
         "preserve": "bazel build src && ./bundle.sh",
-        "serve": "lite-server -c test/browser.config.json",
+        "serve": "lite-server",
         "pretest": "yarn run preserve",
         "test": "concurrently \"yarn run serve\" protractor --kill-others --success first"
     }

@@ -5,6 +5,6 @@ load("@angular//:index.bzl", "ng_module")
 ng_module(
   name = "src",
   srcs = glob(["*.ts"]),
-  deps = ["//src/hello-world"],
+  deps = ["//src/hello-world", "//src/treeview"],
   tsconfig = ":tsconfig.json",
 )
