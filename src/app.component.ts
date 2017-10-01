@@ -4,6 +4,7 @@ import {Component, NgModule} from '@angular/core';
   selector: 'app',
   template: `
     <treeview-demo></treeview-demo>
+    <hello-world></hello-world>
   `
 })
 export class AppComponent {

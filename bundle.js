@@ -22,7 +22,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         AppComponent = __decorate([
             core_1.Component({
                 selector: 'app',
-                template: "\n    <treeview-demo></treeview-demo>\n  "
+                template: "\n    <treeview-demo></treeview-demo>\n    <hello-world></hello-world>\n  "
             })
         ], AppComponent);
         return AppComponent;
@@ -30,14 +30,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     exports.AppComponent = AppComponent;
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9hcHAuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBQUEsc0NBQWtEO0lBUWxEO1FBQUE7UUFDQSxDQUFDO1FBRFksWUFBWTtZQU54QixnQkFBUyxDQUFDO2dCQUNULFFBQVEsRUFBRSxLQUFLO2dCQUNmLFFBQVEsRUFBRSwyQ0FFVDthQUNGLENBQUM7V0FDVyxZQUFZLENBQ3hCO1FBQUQsbUJBQUM7S0FBQSxBQURELElBQ0M7SUFEWSxvQ0FBWSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50LCBOZ01vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2FwcCcsXG4gIHRlbXBsYXRlOiBgXG4gICAgPHRyZWV2aWV3LWRlbW8+PC90cmVldmlldy1kZW1vPlxuICBgXG59KVxuZXhwb3J0IGNsYXNzIEFwcENvbXBvbmVudCB7XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9hcHAuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBQUEsc0NBQWtEO0lBU2xEO1FBQUE7UUFDQSxDQUFDO1FBRFksWUFBWTtZQVB4QixnQkFBUyxDQUFDO2dCQUNULFFBQVEsRUFBRSxLQUFLO2dCQUNmLFFBQVEsRUFBRSw0RUFHVDthQUNGLENBQUM7V0FDVyxZQUFZLENBQ3hCO1FBQUQsbUJBQUM7S0FBQSxBQURELElBQ0M7SUFEWSxvQ0FBWSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50LCBOZ01vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2FwcCcsXG4gIHRlbXBsYXRlOiBgXG4gICAgPHRyZWV2aWV3LWRlbW8+PC90cmVldmlldy1kZW1vPlxuICAgIDxoZWxsby13b3JsZD48L2hlbGxvLXdvcmxkPlxuICBgXG59KVxuZXhwb3J0IGNsYXNzIEFwcENvbXBvbmVudCB7XG59XG4iXX0=
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         var v = factory(require, exports);
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define("src/app.component.ngfactory", ["require", "exports", "@angular/core", "src/treeview/treeview-demo.component.ngfactory", "src/treeview/treeview-demo.component", "src/app.component"], factory);
+        define("src/app.component.ngfactory", ["require", "exports", "@angular/core", "src/treeview/treeview-demo.component.ngfactory", "src/treeview/treeview-demo.component", "src/hello-world/hello-world.component.ngfactory", "src/hello-world/hello-world.component", "src/app.component"], factory);
     }
 })(function (require, exports) {
     "use strict";
@@ -51,19 +51,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     var i0 = require("@angular/core");
     var i1 = require("src/treeview/treeview-demo.component.ngfactory");
     var i2 = require("src/treeview/treeview-demo.component");
-    var i3 = require("src/app.component");
+    var i3 = require("src/hello-world/hello-world.component.ngfactory");
+    var i4 = require("src/hello-world/hello-world.component");
+    var i5 = require("src/app.component");
     var styles_AppComponent = [];
     var RenderType_AppComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_AppComponent, data: {} });
     exports.RenderType_AppComponent = RenderType_AppComponent;
-    function View_AppComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ["\n    "])), (_l()(), i0.ɵeld(0, null, null, 1, "treeview-demo", [], null, null, null, i1.View_TreeviewDemoComponent_0, i1.RenderType_TreeviewDemoComponent)), i0.ɵdid(49152, null, 0, i2.TreeviewDemoComponent, [], null, null), (_l()(), i0.ɵted(null, ["\n  "]))], null, null); }
+    function View_AppComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ["\n    "])), (_l()(), i0.ɵeld(0, null, null, 1, "treeview-demo", [], null, null, null, i1.View_TreeviewDemoComponent_0, i1.RenderType_TreeviewDemoComponent)), i0.ɵdid(49152, null, 0, i2.TreeviewDemoComponent, [], null, null), (_l()(), i0.ɵted(null, ["\n    "])), (_l()(), i0.ɵeld(0, null, null, 1, "hello-world", [], null, null, null, i3.View_HelloWorldComponent_0, i3.RenderType_HelloWorldComponent)), i0.ɵdid(49152, null, 0, i4.HelloWorldComponent, [], null, null), (_l()(), i0.ɵted(null, ["\n  "]))], null, null); }
     exports.View_AppComponent_0 = View_AppComponent_0;
-    function View_AppComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, "app", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i0.ɵdid(49152, null, 0, i3.AppComponent, [], null, null)], null, null); }
+    function View_AppComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, "app", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i0.ɵdid(49152, null, 0, i5.AppComponent, [], null, null)], null, null); }
     exports.View_AppComponent_Host_0 = View_AppComponent_Host_0;
-    var AppComponentNgFactory = i0.ɵccf("app", i3.AppComponent, View_AppComponent_Host_0, {}, {}, []);
+    var AppComponentNgFactory = i0.ɵccf("app", i5.AppComponent, View_AppComponent_Host_0, {}, {}, []);
     exports.AppComponentNgFactory = AppComponentNgFactory;
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmMvYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJmaWxlOi8vL25nOi8vcHJpdmF0ZS92YXIvdG1wL19iYXplbF90b3JnZWlyaGVsZ2V2b2xkLzkxNDgzODhmYmU0MmMxOWIzZTRmNWRiZWMzZjVjOGZjL2V4ZWNyb290L19fbWFpbl9fL3NyYy9hcHAuY29tcG9uZW50LnRzLkFwcENvbXBvbmVudC5odG1sIiwiLi4vLi4vLi4vLi4vIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsyRENBQSxFQUNJLEVBQUEsRUFBQSxFQURKLE9BQ0ksQ0FESixJQUNJLEVBREosQ0FBQSxRQUNJLENBQUEsQ0FBQSxJQUFBLEVBQWUsRUFBQSxFQUFBLEVBQWYsT0FBZSxDQUFmLENBQWUsRUFBZixJQUFlLEVBQWYsSUFBZSxFQUFmLENBQWUsRUFBZixlQUFlLEVBQWYsRUFBZSxFQUFmLElBQWUsRUFBZixJQUFlLEVBQWYsSUFBZSxFQUFmLCtCQUFlLEVBQWYsbUNBQWUsQ0FBQSxHQUFmLE9BQWUsQ0FBZixLQUFlLEVBQWYsSUFBZSxFQUFmLENBQWUsRUFBZix3QkFBZSxFQUFmLEVBQWUsRUFBZixJQUFlLEVBQWYsSUFBZSxDQUFBLEdBQWdCLEVBQ2pDLEVBQUEsRUFBQSxFQURpQyxPQUNqQyxDQURpQyxJQUNqQyxFQURpQyxDQUFBLE1BQ2pDLENBQUEsQ0FBQTs7Z0VDRkYsRUFBSyxFQUFBLEVBQUEsRUFBTCxPQUFLLENBQUwsQ0FBSyxFQUFMLElBQUssRUFBTCxJQUFLLEVBQUwsQ0FBSyxFQUFMLEtBQUssRUFBTCxFQUFLLEVBQUwsSUFBSyxFQUFMLElBQUssRUFBTCxJQUFLLEVBQUwsbUJBQUssRUFBTCx1QkFBSyxDQUFBLEdBQUwsT0FBSyxDQUFMLEtBQUssRUFBTCxJQUFLLEVBQUwsQ0FBSyxFQUFMLGVBQUssRUFBTCxFQUFLLEVBQUwsSUFBSyxFQUFMLElBQUssQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIGkwIGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaTAuQ29tcG9uZW50RmFjdG9yeTtcbiIsIlxuICAgIDx0cmVldmlldy1kZW1vPjwvdHJlZXZpZXctZGVtbz5cbiAgIiwiPGFwcD48L2FwcD4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmMvYXBwLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJmaWxlOi8vL25nOi8vcHJpdmF0ZS92YXIvdG1wL19iYXplbF90b3JnZWlyaGVsZ2V2b2xkLzkxNDgzODhmYmU0MmMxOWIzZTRmNWRiZWMzZjVjOGZjL2V4ZWNyb290L19fbWFpbl9fL3NyYy9hcHAuY29tcG9uZW50LnRzLkFwcENvbXBvbmVudC5odG1sIiwiLi4vLi4vLi4vLi4vIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzJEQ0FBLEVBQ0ksRUFBQSxFQUFBLEVBREosT0FDSSxDQURKLElBQ0ksRUFESixDQUFBLFFBQ0ksQ0FBQSxDQUFBLElBQUEsRUFBZSxFQUFBLEVBQUEsRUFBZixPQUFlLENBQWYsQ0FBZSxFQUFmLElBQWUsRUFBZixJQUFlLEVBQWYsQ0FBZSxFQUFmLGVBQWUsRUFBZixFQUFlLEVBQWYsSUFBZSxFQUFmLElBQWUsRUFBZixJQUFlLEVBQWYsK0JBQWUsRUFBZixtQ0FBZSxDQUFBLEdBQWYsT0FBZSxDQUFmLEtBQWUsRUFBZixJQUFlLEVBQWYsQ0FBZSxFQUFmLHdCQUFlLEVBQWYsRUFBZSxFQUFmLElBQWUsRUFBZixJQUFlLENBQUEsR0FBZ0IsRUFDL0IsRUFBQSxFQUFBLEVBRCtCLE9BQy9CLENBRCtCLElBQy9CLEVBRCtCLENBQUEsUUFDL0IsQ0FBQSxDQUFBLElBQUEsRUFBYSxFQUFBLEVBQUEsRUFBYixPQUFhLENBQWIsQ0FBYSxFQUFiLElBQWEsRUFBYixJQUFhLEVBQWIsQ0FBYSxFQUFiLGFBQWEsRUFBYixFQUFhLEVBQWIsSUFBYSxFQUFiLElBQWEsRUFBYixJQUFhLEVBQWIsNkJBQWEsRUFBYixpQ0FBYSxDQUFBLEdBQWIsT0FBYSxDQUFiLEtBQWEsRUFBYixJQUFhLEVBQWIsQ0FBYSxFQUFiLHNCQUFhLEVBQWIsRUFBYSxFQUFiLElBQWEsRUFBYixJQUFhLENBQUEsR0FBYyxFQUM3QixFQUFBLEVBQUEsRUFENkIsT0FDN0IsQ0FENkIsSUFDN0IsRUFENkIsQ0FBQSxNQUM3QixDQUFBLENBQUE7O2dFQ0hGLEVBQUssRUFBQSxFQUFBLEVBQUwsT0FBSyxDQUFMLENBQUssRUFBTCxJQUFLLEVBQUwsSUFBSyxFQUFMLENBQUssRUFBTCxLQUFLLEVBQUwsRUFBSyxFQUFMLElBQUssRUFBTCxJQUFLLEVBQUwsSUFBSyxFQUFMLG1CQUFLLEVBQUwsdUJBQUssQ0FBQSxHQUFMLE9BQUssQ0FBTCxLQUFLLEVBQUwsSUFBSyxFQUFMLENBQUssRUFBTCxlQUFLLEVBQUwsRUFBSyxFQUFMLElBQUssRUFBTCxJQUFLLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBpMCBmcm9tICdAYW5ndWxhci9jb3JlJztcbmkwLkNvbXBvbmVudEZhY3Rvcnk7XG4iLCJcbiAgICA8dHJlZXZpZXctZGVtbz48L3RyZWV2aWV3LWRlbW8+XG4gICAgPGhlbGxvLXdvcmxkPjwvaGVsbG8td29ybGQ+XG4gICIsIjxhcHA+PC9hcHA+Il19
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         var v = factory(require, exports);
