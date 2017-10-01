@@ -23,10 +23,7 @@
         "typescript": "~2.4.x"
     },
     "scripts": {
-        "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
-        "preserve": "bazel build --watchfs src && ./bundle.sh",
-        "serve": "lite-server",
-        "pretest": "yarn run preserve",
-        "test": "concurrently \"yarn run serve\" protractor --kill-others --success first"
+        "serve": "./bundle.sh && lite-server",
+        "build": "./ibazel build src"
     }
 }

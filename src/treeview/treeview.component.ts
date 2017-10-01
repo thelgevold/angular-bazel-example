@@ -4,6 +4,7 @@ import {Directory} from './directory';
 @Component({
   selector: 'tree-view',
   template: `
+  test
   <ul>
   <li *ngFor="let dir of directories">
       <span class="iconButton" (click)="dir.toggle()">{{dir.getIcon()}}</span><input type="checkbox" [checked]="dir.checked" (click)="dir.check()" /> {{ dir.name }}

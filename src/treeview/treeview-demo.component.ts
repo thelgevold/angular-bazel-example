@@ -20,7 +20,7 @@ export class TreeviewDemoComponent {
     const summer2014 = new Directory('Summer 2014',[],['image10.jpg','image20.jpg','image30.jpg']);
     const pics = new Directory('Pictures',[summer2014,fall2014],[]);
 
-    const music = new Directory('Music',[],['song1.mp3','song2.mp3']);
+    const music = new Directory('Music',[],['song1.mp3','song2.mp3', 'song3.mp3', 'song4.mp3']);
 
     this.directories = [pics,music];
   }
