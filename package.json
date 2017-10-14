@@ -23,6 +23,7 @@
         "typescript": "~2.4.x"
     },
     "scripts": {
+        "postinstall": "ngc -p angular.tsconfig.json",
         "serve": "./bundle.sh && lite-server",
         "build": "./ibazel build src"
     }
