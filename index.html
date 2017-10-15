@@ -3,21 +3,21 @@
 
 <head>
     <script src="/node_modules/zone.js/dist/zone.min.js"></script>
-    <script src="/node_modules/rxjs/bundles/Rx.js"></script>
-    
-    <script src="/node_modules/requirejs/require.js"></script>
-    <script src="/patch_rxjs_amd.js"></script>    
-    
-    <script src="/node_modules/@angular/core/bundles/core.umd.js"></script>
-    <script src="/node_modules/@angular/common/bundles/common.umd.js"></script>
-    <script src="/node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
-    <script src="/bundle.js"></script>
+ 
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="/system-config.js"></script>
+
     <script>
-        require(["src/main"])
-    </script>
+    System.import('./bundle.js')
+    .then(function() {
+      return System.import('airplane/main');
+    })
+    .catch(function(err){ console.error(err); });
+  </script>
 </head>
 
 <body>
-    <app></app>
+    <airplane-app></airplane-app>
 </body>
 </html>

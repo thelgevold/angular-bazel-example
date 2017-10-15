@@ -8,7 +8,6 @@
         "@angular/common": "5.0.0-rc.0",
         "@angular/core": "5.0.0-rc.0",
         "@angular/platform-browser": "5.0.0-rc.0",
-        "requirejs": "^2.3.5",
         "rxjs": "^5.4.1",
         "zone.js": "~0.8.13"
     },
@@ -17,14 +16,15 @@
         "@angular/compiler": "5.0.0-rc.0",
         "@angular/compiler-cli": "5.0.0-rc.0",
         "@bazel/typescript": "alexeagle/rules_typescript#hacky_concat_serve",
-        "concurrently": "^3.5.0",
+        "@types/jasmine": "^2.6.0",
         "lite-server": "^2.3.0",
-        "protractor": "^5.1.2",
+        "systemjs": "0.19.39",
         "typescript": "~2.4.x"
     },
     "scripts": {
         "postinstall": "ngc -p angular.tsconfig.json",
         "serve": "./bundle.sh && lite-server",
-        "build": "./ibazel build src"
+        "build": "bazel build airplane",
+        "start": "npm run build && npm run serve"
     }
 }

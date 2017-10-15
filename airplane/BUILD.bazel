@@ -1,0 +1,20 @@
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "airplane",
+    srcs = ["app.ts", "main.ts"],
+    deps = [
+        "//shared:logo",
+        "//airplane/team0",
+        "//airplane/team1",
+        "//airplane/team2",
+        "//airplane/team3",
+        "//airplane/team4",
+        "//airplane/team5",
+        "//airplane/team6",
+        "//airplane/team7",
+        "//airplane/team8",
+        "//airplane/team9"
+    ],
+    tsconfig = "//:tsconfig.json",
+)
