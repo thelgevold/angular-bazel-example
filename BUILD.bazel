@@ -2,18 +2,18 @@ package(default_visibility = ["//visibility:public"])
 exports_files(["tsconfig.json"])
 
 # NOTE: this will move to node_modules/BUILD in a later release
-filegroup(name = "node_modules", srcs = glob([
-    "node_modules/@angular/**/*.js",
-    "node_modules/@angular/**/*.json",
-    "node_modules/@angular/**/*.d.ts",
-
-    "node_modules/tsickle/**/*.js",
-    "node_modules/tsickle/**/*.json",
-    "node_modules/tsickle/**/*.d.ts",
-
-    "node_modules/typescript/**/*.js",
-    "node_modules/typescript/**/*.json",
-    "node_modules/typescript/**/*.d.ts",
-
-    "node_modules/@types/**/*.d.ts"
-]))
+filegroup(
+    name = "node_modules",
+    srcs = glob(["/".join(["node_modules", pkg, "**", ext]) for pkg in [
+        "tsickle",
+        "typescript",
+        "@types",
+        "@angular",
+        "rxjs",
+        "zone.js"
+    ] for ext in [
+        "*.js",
+        "*.json",
+        "*.d.ts",
+    ]]),
+)

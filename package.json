@@ -4,27 +4,35 @@
     "description": "Demo of bazel rules for angular",
     "license": "Apache 2.0",
     "dependencies": {
-        "@angular/animations": "5.0.0-rc.0",
-        "@angular/common": "5.0.0-rc.0",
-        "@angular/core": "5.0.0-rc.0",
-        "@angular/platform-browser": "5.0.0-rc.0",
+        "@angular/animations": "5.0.1",
+        "@angular/common": "5.0.1",
+        "@angular/core": "5.0.1",
+        "@angular/router": "5.0.1",
+        "@angular/upgrade": "5.0.1",
+        "@angular/platform-browser": "5.0.1",
         "rxjs": "^5.4.1",
-        "zone.js": "~0.8.13"
+        "zone.js": "~0.8.13",
+        "bootstrap": "3.3.4"
     },
     "devDependencies": {
-        "@angular/bazel": "5.0.0-rc.0",
-        "@angular/compiler": "5.0.0-rc.0",
-        "@angular/compiler-cli": "5.0.0-rc.0",
+        "@angular/bazel": "5.0.1",
+        "@angular/compiler": "5.0.1",
+        "@angular/compiler-cli": "5.0.1",
+        "@bazel/ibazel": "^0.0.1",
         "@bazel/typescript": "alexeagle/rules_typescript#hacky_concat_serve",
         "@types/jasmine": "^2.6.0",
+        "browserify": "^14.5.0",
         "lite-server": "^2.3.0",
-        "systemjs": "0.19.39",
-        "typescript": "~2.4.x"
+        "requirejs": "^2.3.5",
+        "systemjs": "0.20.19",
+        "systemjs-builder": "^0.16.12",
+        "typescript": "~2.4.x",
+        "uglify-js": "^3.1.8"
     },
     "scripts": {
         "postinstall": "ngc -p angular.tsconfig.json",
-        "serve": "./bundle.sh && lite-server",
-        "build": "bazel build airplane",
+        "serve": "lite-server",
+        "build": "./link.sh && ibazel run //angular-demo:devserver",
         "start": "npm run build && npm run serve"
     }
 }

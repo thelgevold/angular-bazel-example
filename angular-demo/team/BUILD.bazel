@@ -1,0 +1,20 @@
+package(default_visibility = ["//visibility:public"])
+load("@angular//:index.bzl", "ng_module")
+
+ng_module(
+  name = "team",
+  deps = [
+    "//angular-demo/team0",
+    "//angular-demo/team1",
+    "//angular-demo/team2",
+    "//angular-demo/team3",
+    "//angular-demo/team4",
+    "//angular-demo/team5",
+    "//angular-demo/team6",
+    "//angular-demo/team7",
+    "//angular-demo/team8",
+    "//angular-demo/team9" 
+  ],
+  srcs = glob(["**/*.ts"]),
+  tsconfig = "//:tsconfig.json",
+)
