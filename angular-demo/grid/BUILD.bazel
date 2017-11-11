@@ -5,4 +5,5 @@ ng_module(
   name = "grid",
   srcs = glob(["**/*.ts"]),
   tsconfig = "//:tsconfig.json",
+  assets = ["grid.html"]
 )
