@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
   selector: 'app',
   template: `
              <div class="container">
-               <h1>Angular Demo Components</h1>
+               <h1>Angular Demo</h1>
                <div class="list-group col-md-3">
                  <a [class.active]="getLinkStyle('/grid')" [routerLink]="['/grid']" class="list-group-item">Data Grid</a>
                  <a [class.active]="getLinkStyle('/team')" [routerLink]="['/team']" class="list-group-item">Team</a>

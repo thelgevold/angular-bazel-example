@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Column} from './column';
+import { Component } from '@angular/core';
+import { Column } from './column';
 
 @Component({
   selector: 'grid-demo',
@@ -8,35 +8,34 @@ import {Column} from './column';
 
 export class GridDemo {
 
-    people: Array<Person>;
-    columns: Array<Column>;
-    
-    constructor() {
+  people: Array<Person>;
+  columns: Array<Column>;
+  
+  constructor() {
+    this.people = this.getPeople();
+    this.columns = this.getColumns();
+  }
 
-        this.people = this.getPeople();
-        this.columns = this.getColumns();
-    }
-
-    getPeople(): Array<Person> {
-        return [
-            {firstName:'Joe',lastName:'Jackson',age:20},
-            {firstName:'Peter',lastName:'Smith',age:30},
-            {firstName:'Jane',lastName:'Doe',age:50},
-            {firstName:'Tim',lastName:'Smith',age:80}
-        ];
-    }
-
-    getColumns(): Array<Column> {
-        return [
-            new Column('firstName','First Name'),
-            new Column('lastName','Last Name'),
-            new Column('age','Age')
-        ];
-    }
+  getPeople(): Array<Person> {
+    return [
+     {firstName:'Joe',lastName:'Jackson',age:20},
+     {firstName:'Peter',lastName:'Smith',age:30},
+     {firstName:'Jane',lastName:'Doe',age:50},
+     {firstName:'Tim',lastName:'Smith',age:80}
+    ];
+  }
+  
+  getColumns(): Array<Column> {
+    return [
+      new Column('firstName','First Name'),
+      new Column('lastName','Last Name'),
+      new Column('age','Age')
+    ];
+  }
 }
 
 export interface Person {
-    firstName:string;
-    lastName:string;
-    age:number;
+  firstName:string;
+  lastName:string;
+  age:number;
 }

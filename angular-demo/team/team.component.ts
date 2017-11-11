@@ -14,6 +14,4 @@ import { Component } from '@angular/core';
   <team9-nav></team9-nav>
   `
 })
-export class TeamComponent {
-
-}
+export class TeamComponent {}

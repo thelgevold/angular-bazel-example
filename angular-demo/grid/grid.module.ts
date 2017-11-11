@@ -9,6 +9,4 @@ import { Grid } from './grid';
   declarations: [GridDemo, Grid],
   exports: [GridDemo]
 })
-export class GridModule {
-
-}
+export class GridModule {}
