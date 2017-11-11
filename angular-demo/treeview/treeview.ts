@@ -3,7 +3,7 @@ import { Directory } from './directory';
 
 @Component({
     selector: 'treeview',
-    styleUrls: ['./treeview.css'],
+    styleUrls: ['treeview-styles.css'],
     template: `
     <ul>
     <li *ngFor="let dir of directories">
