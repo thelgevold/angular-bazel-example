@@ -20,3 +20,4 @@ import { GridModule } from './grid/grid.module';
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
 export class AppModule {}
+

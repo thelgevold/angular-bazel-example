@@ -8,8 +8,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/grid',
     pathMatch: 'full'
-  }, 
+  },
   { path: 'team', component: TeamComponent},
+  
     // { path: 'spreadsheet', component: Spreadsheet},
     // { path: 'jquery', component: JqueryIntegration},
     // { path: 'react', component:Angular2Host},

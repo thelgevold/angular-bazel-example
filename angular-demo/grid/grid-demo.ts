@@ -10,7 +10,7 @@ export class GridDemo {
 
     people: Array<Person>;
     columns: Array<Column>;
-
+    
     constructor() {
 
         this.people = this.getPeople();

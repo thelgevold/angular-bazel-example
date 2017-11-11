@@ -21,18 +21,15 @@
         "@bazel/ibazel": "^0.0.1",
         "@bazel/typescript": "alexeagle/rules_typescript#hacky_concat_serve",
         "@types/jasmine": "^2.6.0",
-        "browserify": "^14.5.0",
         "lite-server": "^2.3.0",
-        "requirejs": "^2.3.5",
+        "concurrently": "^3.5.0",
         "systemjs": "0.20.19",
-        "systemjs-builder": "^0.16.12",
-        "typescript": "~2.4.x",
-        "uglify-js": "^3.1.8"
+        "typescript": "~2.4.x"
     },
     "scripts": {
         "postinstall": "ngc -p angular.tsconfig.json",
         "serve": "lite-server",
         "build": "./link.sh && ibazel run //angular-demo:devserver",
-        "start": "npm run build && npm run serve"
+        "start": "concurrently \"npm run build\" \"npm run serve\""
     }
 }

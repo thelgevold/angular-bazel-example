@@ -4,8 +4,9 @@ import { Location } from '@angular/common';
 
 @Component({
   selector: 'app',
-  template: `<h1>Angular Demo Components</h1>
+  template: `
              <div class="container">
+               <h1>Angular Demo Components</h1>
                <div class="list-group col-md-3">
                  <a [class.active]="getLinkStyle('/grid')" [routerLink]="['/grid']" class="list-group-item">Data Grid</a>
                  <a [class.active]="getLinkStyle('/team')" [routerLink]="['/team']" class="list-group-item">Team</a>
@@ -15,6 +16,7 @@ import { Location } from '@angular/common';
                </div>
             </div>`,
 })
+
 export class AppComponent {
   location:Location;
   

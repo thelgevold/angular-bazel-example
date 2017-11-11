@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-  Test 123456789
   <team0-nav></team0-nav>
   <team1-nav></team1-nav>
   <team2-nav></team2-nav>
