@@ -20,8 +20,9 @@
         "@angular/compiler-cli": "5.0.1",
         "@bazel/ibazel": "^0.0.1",
         "@bazel/typescript": "alexeagle/rules_typescript#hacky_concat_serve",
-        "lite-server": "^2.3.0",
+        "@types/jasmine": "^2.6.3",
         "concurrently": "^3.5.0",
+        "lite-server": "^2.3.0",
         "systemjs": "0.20.19",
         "typescript": "~2.4.x"
     },
