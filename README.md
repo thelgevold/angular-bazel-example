@@ -1,3 +1,12 @@
 The dev server currently doesn't rebundle and refresh, but this will be added later. 
 
-To run the app just run npm install && npm run start 
+To run the app run:
+
+bazel run @yarn//:yarn
+
+npm run start
+
+
+The application will build and launch the site using lite-server.
+
+*Note: I had to disable git integration in Visual Studio Code since it caused the ibazel process to continoulsy rebuild.

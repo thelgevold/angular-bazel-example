@@ -1,9 +1,10 @@
 package(default_visibility = ["//visibility:public"])
+
 load("@angular//:index.bzl", "ng_module")
 
 ng_module(
   name = "editor",
-  srcs = glob(["**/*.ts"]),
+  srcs = glob(["*.ts"]),
+  assets = ["editor.css"],
   tsconfig = "//:tsconfig.json",
-  assets = ["editor.css"]
 )

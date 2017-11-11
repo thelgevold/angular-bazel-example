@@ -17,7 +17,7 @@ import {KeyMap} from './key-map';
 
 @Component({
     selector: 'editor',
-    styleUrls: ['editor.css'],
+    styleUrls: ['./editor.css'],
     template: `
     
   <h1>Text editor based on Observables</h1>
