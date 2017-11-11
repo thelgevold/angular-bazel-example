@@ -1,0 +1,9 @@
+package(default_visibility = ["//visibility:public"])
+load("@angular//:index.bzl", "ng_module")
+
+ng_module(
+  name = "insertion-sort",
+  srcs = glob(["**/*.ts"]),
+  tsconfig = "//:tsconfig.json",
+  assets = ["insertion-sort.component.css"]
+)

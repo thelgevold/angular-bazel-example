@@ -3,7 +3,8 @@ import { Treeview } from './treeview';
 import { Directory } from './directory';
 
 @Component({
-  template: `<h1>Recursive TreeView</h1><treeview [directories]="directories"></treeview>`
+  template: `<h2>Recursive TreeView</h2>
+             <treeview [directories]="directories"></treeview>`
 })
 
 export class TreeviewDemo {

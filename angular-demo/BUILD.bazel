@@ -6,8 +6,9 @@ ng_module(
     deps = [
       "//angular-demo/grid",
       "//angular-demo/treeview",
-      "//angular-demo/editor"
-       
+      "//angular-demo/editor",
+      "//angular-demo/insertion-sort",
+      "//angular-demo/spreadsheet"
     ],
     tsconfig = "//:tsconfig.json",
 )

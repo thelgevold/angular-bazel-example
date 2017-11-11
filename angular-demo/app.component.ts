@@ -9,7 +9,9 @@ import { Location } from '@angular/common';
                <h1>Angular Demo</h1>
                <div class="list-group col-md-3">
                  <a [class.active]="getLinkStyle('/grid')" [routerLink]="['/grid']" class="list-group-item">Data Grid</a>
+                 <a [class.active]="getLinkStyle('/spreadsheet')" [routerLink]="['/spreadsheet']" class="list-group-item">Spreadsheet</a>
                  <a [class.active]="getLinkStyle('/editor')" [routerLink]="['/editor']" class="list-group-item">Editor</a>
+                 <a [class.active]="getLinkStyle('/sort')" [routerLink]="['/sort']" class="list-group-item">Insertion Sort</a>
                  <a [class.active]="getLinkStyle('/treeview')" [routerLink]="['/treeview']" class="list-group-item">Treeview</a>
                </div>
                <div class="col-md-9">

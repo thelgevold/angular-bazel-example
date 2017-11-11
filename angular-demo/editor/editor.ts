@@ -20,7 +20,7 @@ import {KeyMap} from './key-map';
     styleUrls: ['./editor.css'],
     template: `
     
-  <h1>Text editor based on Observables</h1>
+  <h2>Text editor based on Observables</h2>
 
   <div class="alert alert-success" role="alert">
       Supports typing of letters and numbers. Basic text selection and cursor placement is also supported.
