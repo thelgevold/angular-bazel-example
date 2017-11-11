@@ -1,5 +1,3 @@
-The dev server currently doesn't rebundle and refresh, but this will be added later. 
-
 To run the app run:
 
 bazel run @yarn//:yarn
