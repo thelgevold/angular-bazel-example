@@ -1,0 +1,34 @@
+.editor{
+  border: 1px #ddd solid;
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+}
+
+.page span{
+  cursor:text;
+}
+
+.page{
+  margin: 10px;
+  white-space: pre;
+  cursor:text;
+}
+
+.currentChar{
+  border-right: 1px black solid;
+}
+
+.selectedChar{
+  background-color: lightgreen;
+}
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

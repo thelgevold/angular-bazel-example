@@ -28,8 +28,8 @@
     },
     "scripts": {
         "postinstall": "ngc -p angular.tsconfig.json",
-        "serve": "lite-server",
-        "build": "./link.sh && ibazel run //angular-demo:devserver",
-        "start": "concurrently \"npm run build\" \"npm run serve\""
+        "_serve": "lite-server -c bs-config.js",
+        "_build": "./link.sh && ibazel run //angular-demo:devserver",
+        "start": "concurrently \"npm run _build\" \"npm run _serve\""
     }
 }

@@ -7,7 +7,7 @@ import { Sorter } from './sorter';
   templateUrl: './grid.html'
 })
 
-export class Grid implements OnInit{
+export class Grid {
 
   @Input() columns:Array<Column>;
   @Input() rows:Array<any>;

@@ -16,4 +16,5 @@ src.forEach(file => {
 });
 
 fs.writeFileSync('bundle.js', code, 'utf8');
-console.log(`bundled JS in ${new Date() - start}ms`);
+let end = new Date();
+console.log(`bundled JS in ${end - start}ms. Last bundled ${end}`);

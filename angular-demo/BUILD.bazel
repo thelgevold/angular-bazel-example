@@ -5,7 +5,8 @@ ng_module(
     srcs = glob(["**/*.ts"]),
     deps = [
       "//angular-demo/grid",
-      "//angular-demo/team"
+      "//angular-demo/treeview",
+      "//angular-demo/editor"
        
     ],
     tsconfig = "//:tsconfig.json",

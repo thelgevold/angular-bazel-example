@@ -1,7 +1,8 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { GridDemo } from './grid/grid-demo';
-import { TeamComponent } from './team/team.component';
+import { TreeviewDemo } from './treeview/treeview-demo';
+import { Editor } from './editor/editor';
 
 export const routes: Routes = [
   {
@@ -9,19 +10,17 @@ export const routes: Routes = [
     redirectTo: '/grid',
     pathMatch: 'full'
   },
-  { path: 'team', component: TeamComponent},
-  
     // { path: 'spreadsheet', component: Spreadsheet},
     // { path: 'jquery', component: JqueryIntegration},
     // { path: 'react', component:Angular2Host},
     // { path: 'algorithms', component:Algorithms},
     // { path: 'graph', component:Graph},
     // { path: 'pub-sub', component:PubSub},
-    // { path: 'text-editor', component:TextEditor},
+  { path: 'editor', component: Editor},
     // { path: 'address', component:AddressBook},
     // { path: 'http', component:HttpSample},
-    // { path: 'treeview', component:TreeViewDemo},
-  { path: 'grid', component:GridDemo}
+  { path: 'treeview', component: TreeviewDemo },
+  { path: 'grid', component: GridDemo }
     // { path: 'input', component:InputControls},
     // { path: 'contact', component:ContactList},
     // { path: 'textbox', component:BoundTextbox},
@@ -37,6 +36,4 @@ export const routes: Routes = [
     // { path: 'buffering', component:RxJsBuffering},
     // { path: 'countries', component:CountryDemo},
     // { path: 'cars', component:CarsComponent}
-    
-  
 ];
