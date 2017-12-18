@@ -1,36 +1,24 @@
-
 load("@angular//:index.bzl", "ng_module")
-ng_module(
-    name = "angular-demo",
-    srcs = glob(["**/*.ts"]),
-    deps = [
-      "//angular-demo/grid",
-      "//angular-demo/treeview",
-      "//angular-demo/editor",
-      "//angular-demo/insertion-sort",
-      "//angular-demo/spreadsheet"
-    ],
-    tsconfig = "//:tsconfig.json",
-)
-
-load("@build_bazel_rules_nodejs//internal:devmode_js_sources.bzl", "devmode_js_sources")
-devmode_js_sources(
-    name = "devsources",
-    deps = [":angular-demo"],
-)
-
+load("//:es6_consumer.bzl", "es6_consumer")
 load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 
+ng_module(
+  name = "angular-demo",
+  srcs = glob(["*.ts"]),
+    
+  tsconfig = "//:tsconfig.json",
+)
+
+es6_consumer(
+  name = "es6",
+  deps = [":angular-demo"],
+)
+
 nodejs_binary(
-    name = "devserver",
-    entry_point = "./angular-demo/concat.js",
-    data = [
-        ":devsources",
-        # Seems like this should be included in the files[] in the :devsources
-        ":devsources.MF",
-        ":concat.js"
-    ],
-    # Tell ibazel not to re-start the server under 'ibazel run'
-    # It should just re-build the data[]
-    tags = ["IBAZEL_MAGIC_TAG"]
+  name = "bundle",
+  entry_point = "./angular-demo/bundle.js",
+  data = [
+    
+    ":bundle"
+  ]
 )

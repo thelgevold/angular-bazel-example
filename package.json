@@ -23,13 +23,15 @@
         "@types/jasmine": "^2.6.3",
         "concurrently": "^3.5.0",
         "lite-server": "^2.3.0",
+        "rollup": "^0.51.5",
+        "rollup-plugin-node-resolve": "^2.0.0",
         "systemjs": "0.20.19",
         "typescript": "~2.4.x"
     },
     "scripts": {
         "postinstall": "ngc -p angular.tsconfig.json",
         "_serve": "lite-server -c bs-config.js",
-        "_build": "./link.sh && ibazel run //angular-demo:devserver",
+        "_build": "bazel build //angular-demo:es6",
         "start": "concurrently \"npm run _build\" \"npm run _serve\""
     }
 }

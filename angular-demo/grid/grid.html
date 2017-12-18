@@ -1,9 +1,0 @@
-<h2>Sortable Grid Demo</h2>
-<table class="table table-striped">
-    <tr>
-        <td *ngFor="let col of columns"><a (click)="sort(col.name)">{{col.descr}}</a></td>
-    </tr>
-    <tr *ngFor="let row of rows">
-        <td *ngFor="let col of columns">{{row[col.name]}}</td>
-    </tr>
-</table>

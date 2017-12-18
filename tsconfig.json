@@ -1,9 +1,14 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "experimentalDecorators": true,
-        "lib": ["es5", "dom", "es2015.collection", "es2015.promise", "es2015.iterable"],
-        "types": ["node", "jasmine"],
-        "skipLibCheck": true
+      "lib": ["es2017", "dom"],
+      "experimentalDecorators": true,
+      "removeComments": true,
+      "pretty": true,
+  
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true
     }
-}
+  }
