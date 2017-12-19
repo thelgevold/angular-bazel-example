@@ -9,11 +9,3 @@ build --strategy=TypeScriptCompile=worker
 #
 # Instead, you should run `bazel info bazel-bin` to find out where the outputs went.
 build --symlink_prefix=dist/
-
-test --test_output=errors
-
-# Workaround https://github.com/bazelbuild/bazel/issues/3645
-# Limit Bazel to consuming 3072K of RAM
-build:ci --local_resources=3072,2.0,1.0
-
-build:ci --noshow_progress

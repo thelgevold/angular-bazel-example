@@ -1,0 +1,24 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//sass:sass.bzl", "sass_binary")
+
+sass_binary(
+    name = "treeview-styles",
+    src = "treeview.component.scss"
+)
+
+ng_module(
+    name = "treeview",
+    srcs = [
+        "treeview.component.ts",
+        "treeview-demo.component.ts",
+        "treeview.module.ts",
+        "directory.ts"
+    ],
+    assets = [":treeview-styles"],
+    tsconfig = "//src:tsconfig.json",
+    deps = [
+        "@rxjs",
+    ]
+)
