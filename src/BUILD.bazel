@@ -1,5 +1,6 @@
 package(default_visibility = ["//visibility:public"])
 
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 load("@angular//:index.bzl", "ng_module")
 
 ng_module(
@@ -30,4 +31,38 @@ ts_devserver(
         "index.html",
     ],
     deps = ["//src"],
+)
+
+load(":es6.bzl", "es6")
+
+es6(
+    name = "es6",
+    deps = [":src"],
+)
+
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "rollup",
+    entry_point = "rollup/bin/rollup",
+    data = [
+        "//:rollup.config.js",
+        ":es6"
+    ]
+ )
+
+nodejs_binary(
+    name = "es5",
+    entry_point = "typescript/bin/tsc"
+)
+
+nodejs_binary(
+    name = "uglify",
+    entry_point = "uglify-js/bin/uglifyjs"
+)
+
+load(":rollup.bzl", "rollup")
+rollup(
+    name = "bundle",
+    entry_point = "main.js"
 )

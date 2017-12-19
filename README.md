@@ -45,3 +45,11 @@ Production bundling with https://github.com/bazelbuild/rules_closure/ is
 underway, should be available Dec 2017 or Jan 2018
 
 Code-splitting and lazy loading are planned for Q1 2018
+
+Experimental Production bundling with Rollup:
+
+```
+npm run rollup
+```
+
+Test the bundled rollup application by running npm run lite

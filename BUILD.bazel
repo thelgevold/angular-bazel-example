@@ -2,27 +2,15 @@ package(default_visibility = ["//visibility:public"])
 
 exports_files(["tsconfig.json"])
 
-# NOTE: this will move to node_modules/BUILD in a later release
 filegroup(
     name = "node_modules",
-    # NB: rxjs is not in this list, because we build it from sources using the
-    # label @rxjs//:rxjs
-    srcs = glob(["/".join([
-        "node_modules",
-        pkg,
-        "**",
-        ext,
-    ]) for pkg in [
-        "@angular",
-        "tsickle",
-        "tsutils",
-        "typescript",
-        "@types",
-    ] for ext in [
-        "*.js",
-        "*.json",
-        "*.d.ts",
-    ]]),
+    srcs = glob([
+        "node_modules/@angular/**",
+        "node_modules/rollup/**",
+        "node_modules/typescript/**",
+        "node_modules/uglify-js/**",
+        "rollup.config.js"
+    ]),
 )
 
 ANGULAR_TESTING = [
