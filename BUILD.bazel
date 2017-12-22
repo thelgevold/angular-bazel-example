@@ -9,6 +9,7 @@ filegroup(
         "node_modules/rollup/**",
         "node_modules/typescript/**",
         "node_modules/uglify-js/**",
+        "node_modules/lite-server/**",
         "rollup.config.js"
     ]),
 )

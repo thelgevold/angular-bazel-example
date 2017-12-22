@@ -6,7 +6,7 @@ git_repository(
     commit = "adcd7d2f21256dddb583f5df129543a575c96218",
 )
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories")
+load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "npm_install")
 node_repositories(package_json = ["//:package.json"])
 
 git_repository(
@@ -60,3 +60,35 @@ go_rules_dependencies()
 go_register_toolchains()
 
 
+npm_install(
+    name = "angular_bazel_example_prod_deps",
+    package_json = "//:package.prodserver.json",
+)
+
+git_repository(
+    name = "io_bazel_rules_docker",
+    remote = "https://github.com/bazelbuild/rules_docker.git",
+    commit = "766df456abcad45534bea51fa4e628cac24badf6",
+)
+load(
+    "@io_bazel_rules_docker//nodejs:image.bzl",
+    _nodejs_image_repos = "repositories",
+)
+
+_nodejs_image_repos()
+
+git_repository(
+    name = "io_bazel_rules_k8s",
+    commit = "055db1f75e00e805762798bbb14afb945955f5c1",
+    remote = "https://github.com/bazelbuild/rules_k8s.git",
+)
+
+load("@io_bazel_rules_k8s//k8s:k8s.bzl", "k8s_repositories", "k8s_defaults")
+k8s_repositories()
+k8s_defaults(
+  name = "k8s_dev_deploy",
+  kind = "deployment",
+  # FIXME
+  cluster = "gke_company-{BUILD_USER}_us-central5-z_da-cluster",
+  image_chroot = "us.gcr.io/company-{BUILD_USER}/dev",
+)

@@ -1,5 +1,5 @@
 def _rollup(ctx):
- 
+
   baseFolder = "{0}/rollup.runfiles/{1}".format(ctx.executable.rollup.dirname, ctx.workspace_name)
 
   rollupConfig = "{0}/rollup.config.js".format(baseFolder)
@@ -8,7 +8,7 @@ def _rollup(ctx):
   args = ["--config", rollupConfig]
   args += ["--output.file", ctx.outputs.build_es6.path]
   args += ["--input", entryPoint]
-  
+
   ctx.action(
       executable = ctx.executable.rollup,
       outputs = [ctx.outputs.build_es6],
@@ -19,7 +19,7 @@ def _rollup(ctx):
   argsTS += ["--allowJS"]
   argsTS += [ctx.outputs.build_es6.path]
   argsTS += ["--outFile", ctx.outputs.build_es5.path]
-  
+
   ctx.action(
       executable = ctx.executable.typescript,
       inputs = [ctx.outputs.build_es6],
@@ -48,8 +48,8 @@ rollup = rule(
         "uglify": attr.label(default=Label("//src:uglify"), executable=True, cfg="host", allow_files=True)
     },
     outputs = {
-        "build_es6": "app-es6-%{name}.js",
-        "build_es5": "app-es5-%{name}.js",
-        "build_es5_min": "app-es5-%{name}.min.js"
+        "build_es6": "%{name}.es6.js",
+        "build_es5": "%{name}.js",
+        "build_es5_min": "%{name}.min.js"
     }
 )
