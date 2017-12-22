@@ -88,11 +88,11 @@ nodejs_image(
     # data = [":app-es5-bundle.min.js"],
 )
 
-load("@io_bazel_rules_k8s//:defaults.bzl", "k8s_deploy")
-k8s_deploy(
-  name = "dev",
-  template = ":deployment.yaml",
-  images = {
-    "gcr.io/rules_k8s/server:dev": "//server:image"
-  },
-)
+# load("@io_bazel_rules_k8s//:defaults.bzl", "k8s_deploy")
+# k8s_deploy(
+#   name = "dev",
+#   template = ":deployment.yaml",
+#   images = {
+#     "gcr.io/rules_k8s/server:dev": "//server:image"
+#   },
+# )

@@ -53,3 +53,20 @@ npm run rollup
 ```
 
 Test the bundled rollup application by running npm run lite
+
+Run it under docker:
+
+```
+$ bazel run src:nodejs_image -- --norun
+$ docker run --rm -p 3000:3000 -p 3001:3001 -w /app/src/nodejs_image.binary.runfiles/angular_bazel_example bazel/src:nodejs_image
+```
+
+tips:
+```
+# Run the binary without docker
+$ bazel run src:nodejs_image.binary
+# What's in the image?
+$ bazel build src:nodejs_image && file-roller dist/bin/src/nodejs_image-layer.tar
+# Tear down all running docker containers
+$ docker rm -f $(docker ps -aq)
+```
