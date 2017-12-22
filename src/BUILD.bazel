@@ -73,6 +73,7 @@ nodejs_binary(
 )
 
 load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 
 nodejs_image(
     name = "nodejs_image",
@@ -82,17 +83,14 @@ nodejs_image(
     data = [
         ":zone.min.js",
         ":index.html",
-        ":bundle.js",
+        ":bundle.js", # FIXME:
     ],
     #FIXME should be:
     # data = [":app-es5-bundle.min.js"],
 )
 
-# load("@io_bazel_rules_k8s//:defaults.bzl", "k8s_deploy")
-# k8s_deploy(
-#   name = "dev",
-#   template = ":deployment.yaml",
-#   images = {
-#     "gcr.io/rules_k8s/server:dev": "//server:image"
-#   },
-# )
+container_image(
+    name = "image",
+    base = ":nodejs_image",
+    workdir = "/app/src/nodejs_image.binary.runfiles/angular_bazel_example",
+)

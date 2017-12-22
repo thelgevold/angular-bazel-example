@@ -83,12 +83,15 @@ git_repository(
     remote = "https://github.com/bazelbuild/rules_k8s.git",
 )
 
+####################################################
+# Kubernetes setup, for deployment to Google Cloud #
+####################################################
+
 load("@io_bazel_rules_k8s//k8s:k8s.bzl", "k8s_repositories", "k8s_defaults")
 k8s_repositories()
 k8s_defaults(
-  name = "k8s_dev_deploy",
+  name = "k8s_deploy",
   kind = "deployment",
-  # FIXME
-  cluster = "gke_company-{BUILD_USER}_us-central5-z_da-cluster",
-  image_chroot = "us.gcr.io/company-{BUILD_USER}/dev",
+  cluster = "gke_angular2-automation_us-west1-a_angular-bazel-example",
+  #image_chroot = "us.gcr.io/angular2-automation-angular-bazel-example/dev",
 )

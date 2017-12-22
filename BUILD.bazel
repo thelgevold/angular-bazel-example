@@ -53,3 +53,13 @@ filegroup(
         "//:node_modules/zone.js/dist/jasmine-patch.js",
     ],
 )
+
+load("@k8s_deploy//:defaults.bzl", "k8s_deploy")
+k8s_deploy(
+  name = "deploy",
+  template = ":deployment.yaml",
+  images = {
+    "gcr.io/angular2-automation/src:nodejs_image":
+        "//src:image"
+  },
+)

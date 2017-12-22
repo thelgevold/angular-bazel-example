@@ -58,7 +58,7 @@ Run it under docker:
 
 ```
 $ bazel run src:nodejs_image -- --norun
-$ docker run --rm -p 3000:3000 -p 3001:3001 -w /app/src/nodejs_image.binary.runfiles/angular_bazel_example bazel/src:nodejs_image
+$ docker run --rm -p 3000:3000 -p 3001:3001 bazel/src:nodejs_image
 ```
 
 tips:
@@ -69,4 +69,6 @@ $ bazel run src:nodejs_image.binary
 $ bazel build src:nodejs_image && file-roller dist/bin/src/nodejs_image-layer.tar
 # Tear down all running docker containers
 $ docker rm -f $(docker ps -aq)
+# Hop into the running image on kubernetes
+$ kubectl exec angular-bazel-example-prod-3285254973-ncv3g  -it -- /bin/bash
 ```
