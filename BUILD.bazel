@@ -30,6 +30,8 @@ filegroup(
         "*.d.ts",
     ]] + [
         "node_modules/http-server/**",
+        "node_modules/express/**/*.js",
+        "node_modules/tslib"
     ]),
 )
 
@@ -50,6 +52,7 @@ filegroup(
     srcs = glob(
         [
             "node_modules/@angular/*/bundles/*.umd.js",
+            "node_modules/tslib/tslib.js"
         ],
         exclude = ANGULAR_TESTING,
     ),

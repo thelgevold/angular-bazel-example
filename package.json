@@ -7,7 +7,9 @@
         "@angular/animations": "5.2.9",
         "@angular/common": "5.2.9",
         "@angular/core": "5.2.9",
+        "@angular/http": "5.2.9",
         "@angular/platform-browser": "5.2.9",
+        "express": "^4.16.3",
         "rxjs": "5.5.7",
         "zone.js": "0.8.20"
     },
@@ -20,7 +22,7 @@
         "@bazel/ibazel": "0.3.1",
         "@types/jasmine": "2.8.6",
         "clang-format": "1.2.2",
-        "concurrently": "3.5.1",
+        "concurrently": "^3.5.1",
         "http-server": "0.11.1",
         "husky": "0.14.3",
         "protractor": "5.3.0",
@@ -28,13 +30,12 @@
     },
     "scripts": {
         "postinstall": "concurrently \"webdriver-manager update\" \"ngc -p angular.tsconfig.json\"",
-
         "serve": "ibazel run //src:devserver",
+        "start": "concurrently \"npm run serve\" \"npm run api\"",
+        "api": "ibazel run //src/api",
         "pree2e": "bazel build test/...",
         "e2e": "concurrently \"bazel run //src:prodserver\" \"while ! nc -z 127.0.0.1 8080; do sleep 1; done && protractor\" --kill-others --success first",
-
         "prebuildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier",
-        "buildifier": "note: working around https://github.com/alexeagle/angular-bazel-example/issues/60",
         "buildifier": "find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/*/buildifier",
         "format": "git-clang-format",
         "precommit": "check-clang-format \"yarn format\""

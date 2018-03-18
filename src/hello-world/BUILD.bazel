@@ -26,20 +26,3 @@ ng_module(
         "@rxjs",
     ],
 )
-
-ts_library(
-    name = "test_lib",
-    testonly = 1,
-    srcs = glob(["*.spec.ts"]),
-    deps = [":hello-world"],
-)
-
-ts_web_test(
-    name = "test",
-    bootstrap = ["//:angular_bootstrap_scripts"],
-    deps = [
-        ":test_lib",
-        "//:angular_bundles",
-        "//:angular_test_bundles",
-    ],
-)
