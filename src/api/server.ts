@@ -11,8 +11,6 @@ app.use(function(req, res, next) {
 
 const helloWorldService = new HelloWorldService();
 
-console.log('TEST');
-
 app.get('/hello-world', (req, res) => res.json(helloWorldService.getMessage()))
 
 app.listen(9000, () => console.log('Example app listening on port 9000!'))
