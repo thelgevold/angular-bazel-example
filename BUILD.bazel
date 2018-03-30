@@ -29,7 +29,7 @@ filegroup(
         "*.json",
         "*.d.ts",
     ]] + [
-        "node_modules/http-server/**",
+        "node_modules/http-server/**"
     ]),
 )
 
