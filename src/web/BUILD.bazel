@@ -1,0 +1,7 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle", "nodejs_binary")
+
+nodejs_binary(
+    name = "web",
+    data = ["//:views", ":server.js", "//src:devserver"],
+    entry_point = "angular_bazel_example/src/web/server.js"
+) 

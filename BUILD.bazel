@@ -30,6 +30,10 @@ filegroup(
         "*.d.ts",
     ]] + [
         "node_modules/http-server/**",
+        "node_modules/express/**/*.js",
+        "node_modules/mustache-express/**/*.js",
+        "node_modules/tslib",
+        "node_modules/nodemon/**/*.js"
     ]),
 )
 
@@ -59,6 +63,11 @@ filegroup(
     name = "angular_test_bundles",
     testonly = 1,
     srcs = glob(ANGULAR_TESTING),
+)
+
+filegroup(
+    name = "views",
+    srcs = ["views/index.html"],
 )
 
 filegroup(
