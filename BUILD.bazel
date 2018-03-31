@@ -32,8 +32,7 @@ filegroup(
         "node_modules/http-server/**",
         "node_modules/express/**/*.js",
         "node_modules/mustache-express/**/*.js",
-        "node_modules/tslib",
-        "node_modules/nodemon/**/*.js"
+        "node_modules/tslib"
     ]),
 )
 
