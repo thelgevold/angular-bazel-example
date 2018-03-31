@@ -10,3 +10,5 @@ Start the project by running npm run start
 
 Access the application on http://localhost:7777
 
+Blog post: http://www.syntaxsuccess.com/viewarticle/bazel-with-angular,-node-and-java
+
