@@ -1,2 +1,5 @@
-<nav><a routerLink="/">Home</a> | <a routerLink="/todos">Todos</a></nav>
-<router-outlet></router-outlet>
+<h1>Friends</h1>
+
+<div *ngFor="let friend of friends | async">
+  {{ friend }}
+</div>

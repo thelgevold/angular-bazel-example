@@ -3,6 +3,8 @@
 build --strategy=TypeScriptCompile=worker
 build --strategy=AngularTemplateCompile=worker
 
+build --spawn_strategy=standalone
+
 # Don't create bazel-* symlinks in the WORKSPACE directory.
 # These require .gitignore and may scare users.
 # Also, it's a workaround for https://github.com/bazelbuild/rules_typescript/issues/12

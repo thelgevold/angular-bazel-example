@@ -11,10 +11,9 @@ ng_module(
     ],
     tsconfig = ":tsconfig.json",
     deps = [
-        "//src/hello-world",
-        "//src/todos",
         "@angular//packages/core",
-        "@angular//packages/router",
+        "@angular//packages/common/http",
+        "@angular//packages/platform-browser"
     ],
 )
 
@@ -28,12 +27,10 @@ ts_devserver(
     additional_root_paths = [
         "angular_bazel_example/node_modules/zone.js/dist",
         "angular_bazel_example/node_modules/tslib",
-        "angular_bazel_example/node_modules/@ngrx/store/bundles",
     ],
     # Start from the development version of the main
-    entry_module = "angular_bazel_example/src/main.dev",
+    entry_module = "angular_bazel_example/src/main",
     scripts = [
-        ":require.config.js",
     ],
     # This is the URL we'll point our <script> tag at
     serving_path = "/bundle.min.js",
@@ -41,57 +38,9 @@ ts_devserver(
     static_files = [
         "//:node_modules/zone.js/dist/zone.min.js",
         "//:node_modules/tslib/tslib.js",
-        "//:node_modules/@ngrx/store/bundles/store.umd.min.js",
         "index.html",
     ],
     # Tell Bazel to build the sources first
     deps = ["//src"],
 )
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary", "rollup_bundle")
-
-rollup_bundle(
-    name = "bundle",
-    # These Angular routes may be lazy-loaded at runtime.
-    # So we tell Rollup that it can put them in separate JS chunks
-    # (code-splitting) for faster application startup.
-    # In the future, we could automatically gather these from statically
-    # analyzing the Angular sources.
-    additional_entry_points = [
-        "src/hello-world/hello-world.module.ngfactory",
-        "src/todos/todos.module.ngfactory",
-    ],
-    entry_point = "src/main",
-    node_modules = "//:node_modules",
-    deps = ["//src"],
-)
-
-# Copy zone.min.js to this package.
-# Needed because the prodserver only loads static files that appear under this
-# package.
-genrule(
-    name = "copy_zonejs",
-    srcs = ["//:node_modules/zone.js/dist/zone.min.js"],
-    outs = ["zone.min.js"],
-    cmd = "cp $< $@",
-)
-
-# See comment for zonejs above
-genrule(
-    name = "copy_systemjs",
-    srcs = ["//:node_modules/systemjs/dist/system.js"],
-    outs = ["system.js"],
-    cmd = "cp $< $@",
-)
-
-load("@build_bazel_rules_nodejs//:defs.bzl", "history_server")
-
-history_server(
-    name = "prodserver",
-    data = [
-        "index.html",
-        ":bundle",
-        ":copy_systemjs",
-        ":copy_zonejs",
-    ],
-)

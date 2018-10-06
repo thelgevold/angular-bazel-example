@@ -8,7 +8,9 @@
         "rxjs": "6.3.3",
         "systemjs": "0.21.5",
         "tslib": "1.9.3",
-        "zone.js": "0.8.26"
+        "zone.js": "0.8.26",
+        "express": "4.16.3",
+        "request": "2.87.0"
     },
     "devDependencies": {
         "@angular/compiler": "6.1.8",
@@ -25,16 +27,7 @@
         "typescript": "2.9.2"
     },
     "scripts": {
-        "build": "bazel build //src:bundle",
-        "serve": "ibazel run //src:devserver",
-        "serve-prod": "bazel run //src:prodserver",
-        "e2e": "bazel test //e2e:all",
-        "test": "bazel test //src/...",
-        "postinstall": "ngc -p postinstall.tsconfig.json",
-        "prebuildifier": "bazel build @com_github_bazelbuild_buildtools//buildifier",
-        "//": "note: working around https://github.com/alexeagle/angular-bazel-example/issues/60",
-        "buildifier": "find . -type f \\( -name BUILD -or -name BUILD.bazel \\) ! -path \"./node_modules/*\" | xargs $(bazel info bazel-bin)/external/com_github_bazelbuild_buildtools/buildifier/*/buildifier",
-        "format": "git-clang-format",
-        "precommit": "check-clang-format \"yarn format\""
+        "serve": "concurrently \"ibazel run //src:devserver\" \"ibazel run //src/api\" \"bazel run //src/backend\""
+     
     }
 }

@@ -1,0 +1,34 @@
+package(default_visibility = [ "//visibility:public" ])
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_library", "dotnet_binary", "dotnet_import_library")
+
+dotnet_import_library(
+  name = "selfhost",
+  src = "System.Web.Http.SelfHost.dll"
+)
+
+dotnet_library(
+    name = "lib",
+    srcs = [
+        "lib.cs"
+    ],
+    deps = [
+        #TODO: This should be a nuget package, and not a manually downloaded dll
+        ":selfhost",
+
+        "@io_bazel_rules_dotnet//dotnet/stdlib:System.Web.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib:System.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib:System.Web.Http.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib:System.Net.Http.dll"
+    ]
+)
+
+dotnet_binary(
+  name = "backend",
+  srcs = [
+      "program.cs",
+  ],
+  deps = [
+     ":lib"
+  ],
+
+)

@@ -95,3 +95,86 @@ sass_repositories()
 load("@angular//:index.bzl", "ng_setup_workspace")
 
 ng_setup_workspace()
+
+
+git_repository(
+    name = "io_bazel_rules_dotnet",
+    remote = "https://github.com/bazelbuild/rules_dotnet",
+    commit = "bae7320775e43cd2c32d8abb3593c4a82527504e",
+)
+
+
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_register_toolchains", "dotnet_repositories", "nuget_package")
+#
+#nuget_package(
+#    name = "Microsoft.AspNet.WebApi.SelfHost",
+#    package = "Microsoft.AspNet.WebApi.SelfHost",
+#    version = "5.2.6",
+#    sha256 = "fa3e0cfbb2caa9946d2ce3d8174031a06320aad2c9e69a60f7739b9ddf19f172",
+#    core_lib = "lib/netstandard2.0/System.Web.Http.SelfHost.dll",
+#    net_lib = "lib/net45/System.Web.Http.SelfHost.dll",
+#    mono_lib = "lib/net45/System.Web.Http.SelfHost.dll",
+#    core_deps = [
+#    ],
+#    net_deps = [
+#    ],
+#    mono_deps = [
+#    ],
+#    core_files = [
+#        "lib/netstandard2.0/System.Web.Http.SelfHost.dll",
+#        "lib/netstandard2.0/System.Web.Http.SelfHost.xml",
+#    ],
+#    net_files = [
+#        "lib/net45/System.Web.Http.SelfHost.dll",
+#        "lib/net45/System.Web.Http.SelfHost.xml",
+#    ],
+#    mono_files = [
+#        "lib/net45/System.Web.Http.SelfHost.dll",
+#        "lib/net45/System.Web.Http.SelfHost.xml",
+#    ],
+#)
+#
+##nuget_package(
+#    name = "Microsoft.AspNet.WebApi.SelfHost",
+#    package="Microsoft.AspNet.WebApi.SelfHost",
+#    version="5.2.6",
+#    sha256 = "fa3e0cfbb2caa9946d2ce3d8174031a06320aad2c9e69a60f7739b9ddf19f172",
+#    #core_lib = "lib/netstandard2.0/Newtonsoft.Json.dll",
+#    net_lib = "lib/net45/System.Web.Http.SelfHost.dll",
+#    mono_lib = "lib/net45/System.Web.Http.SelfHost.dll",
+#    core_deps = [
+#    ],
+#    net_deps = [
+#    ],
+#    mono_deps = [
+#    ],
+#    core_files = [
+#        
+#    ],
+#    net_files = [
+#       
+#    ],
+#    mono_files = [
+#        
+#    ],
+#)
+#
+#dotnet_nuget_new(
+#        name = "Microsoft.AspNet.WebApi.SelfHost",
+#        package="Microsoft.AspNet.WebApi.SelfHost",
+#        version="5.2.6",
+#        sha256="fa3e0cfbb2caa9946d2ce3d8174031a06320aad2c9e69a60f7739b9ddf19f172",
+#        build_file_content = """
+#package(default_visibility = [ "//visibility:public" ])
+#load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_import_library")
+#
+#dotnet_import_library(
+#    name = "System.Web.Http.SelfHost",
+#    src = "lib/net45/System.Web.Http.SelfHost.dll"
+#)
+#    """
+#)
+
+dotnet_register_toolchains("host")
+
+dotnet_repositories()
