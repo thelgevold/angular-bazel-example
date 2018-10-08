@@ -35,6 +35,8 @@ filegroup(
             "node_modules/protractor/**",
             # Also include all files in node_modules/.bin
             "node_modules/.bin/*",
+            "node_modules/webpack/*",
+            "node_modules/webpack-cli/*",
            
         ],
         exclude = [
