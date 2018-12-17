@@ -1,0 +1,24 @@
+exports_files(["tsconfig.json"])
+
+platform(
+    name = "rbe_ubuntu1604-angular",
+    constraint_values = [
+        "@bazel_tools//platforms:x86_64",
+        "@bazel_tools//platforms:linux",
+        "@bazel_tools//tools/cpp:clang",
+        "@bazel_toolchains//constraints:xenial",
+    ],
+    # We are currently using the docker container image provided by RBE. Once
+    # Angular has the billing account setup, we should start using/maintaining
+    # our own docker container image.
+    remote_execution_properties = """
+        properties: {
+            name: "container-image"
+            value:"docker://gcr.io/asci-toolchain/nosla-ubuntu16_04-webtest@sha256:e874885f5e3d9ac0c0d3176e5369cb5969467dbf9ad8d42b862829cec8d84b9b"
+        }
+        properties: {
+            name: "dockerAddCapabilities"
+            value: "SYS_ADMIN"
+        }
+        """,
+)

@@ -1,0 +1,13 @@
+version: "3.5"
+
+networks:
+  remote-execution_remote-server:
+    external: true
+
+services:
+  remote_worker:
+    build: .
+    command: bash -c "bazel build //src/main/java/build/buildfarm:buildfarm-worker && bazel-bin/src/main/java/build/buildfarm/buildfarm-worker examples/worker.config"
+    container_name: remote_worker
+    networks:
+      remote-execution_remote-server:

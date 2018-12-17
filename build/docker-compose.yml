@@ -1,0 +1,18 @@
+version: "3.5"
+
+networks:
+  remote-execution_remote-server:
+    external: true
+
+services:
+  angular:
+    build: .
+    command: bash -c "tail -f /dev/null"
+    ports:
+      - "5432:5432"
+      - "35729:35729"
+    container_name: angular
+    volumes:
+      - ../:/usr/demo
+    networks:
+       remote-execution_remote-server:
