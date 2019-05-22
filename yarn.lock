@@ -174,6 +174,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/upgrade@8.0.0-rc.4":
+  version "8.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-8.0.0-rc.4.tgz#1e5539f04fa5d0fb3413e2de59691ce9d1a4a8e2"
+  integrity sha512-i9RMX4Y9N5qBEXZZTnzzBnFsMnPDwt/GIsPctbQ/sCXkA04lprGnfP+ujRIH6zf0oDj7cXZxHd+J87NbxNI43w==
+  dependencies:
+    tslib "^1.9.0"
+
 "@bazel/bazel-darwin_x64@0.25.1":
   version "0.25.1"
   resolved "https://registry.yarnpkg.com/@bazel/bazel-darwin_x64/-/bazel-darwin_x64-0.25.1.tgz#6526aba1cd912830595c3903ad29dfcb338114a3"
@@ -521,6 +528,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
+"@types/angular@1.6.54":
+  version "1.6.54"
+  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.54.tgz#f9d5a03e4da7b021a6dabe5d63e899ed4567a5bd"
+  integrity sha512-xA1FuozWXeRQ7FClUbvk8ePL+dydBeDoCWRPFTHU5+8uvVtIIfLGiHA8CMkwsbddFCYnTDVbLxG85a/HBx7LtA==
+
 "@types/argparse@1.0.33":
   version "1.0.33"
   resolved "https://registry.yarnpkg.com/@types/argparse/-/argparse-1.0.33.tgz#2728669427cdd74a99e53c9f457ca2866a37c52d"
@@ -644,6 +656,11 @@ ajv@6.10.0, ajv@^6.5.2, ajv@^6.5.5:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+angular@1.7.8:
+  version "1.7.8"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.8.tgz#b77ede272ce1b261e3be30c1451a0b346905a3c9"
+  integrity sha512-wtef/y4COxM7ZVhddd7JtAAhyYObq9YXKar9tsW7558BImeVYteJiTxCKeJOL45lJ/+7B4wrAC49j8gTFYEthg==
 
 ansi-align@^2.0.0:
   version "2.0.0"

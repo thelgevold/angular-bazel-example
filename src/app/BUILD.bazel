@@ -8,6 +8,7 @@ NG_FACTORY_ADDED_IMPORTS = [
     "@npm//@angular/cdk",
     "@npm//@angular/material",
     "@npm//@angular/forms",
+    "@npm//@angular/upgrade",
 ]
 
 # This list is auto-updated by /tools/generator

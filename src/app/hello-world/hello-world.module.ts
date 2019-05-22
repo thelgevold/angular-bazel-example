@@ -11,7 +11,7 @@ import {HelloWorldComponent} from './hello-world.component';
     FormsModule, RouterModule, MaterialModule,
     RouterModule.forChild([{path: '', component: HelloWorldComponent}])
   ],
-  exports: [HelloWorldComponent],
+  exports: [HelloWorldComponent]
 })
 export class HelloWorldModule {
 }

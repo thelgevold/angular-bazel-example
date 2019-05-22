@@ -51,10 +51,13 @@ ng_module(
     tsconfig = ":tsconfig.json",
     deps = NG_FACTORY_ADDED_IMPORTS + [
         "//src/app",
+        "//src/app/angularjs",
         "@npm//@angular/core",
         "@npm//@angular/platform-browser",
         "@npm//@angular/router",
+        "@npm//@angular/upgrade",
         "@npm//@ngrx/store",
+        "@npm//@types/angular",
     ],
 )
 
@@ -87,6 +90,7 @@ _ASSETS = [
     # zone.js is used, given that we don't have any import statement that
     # imports from it.
     "@npm//node_modules/zone.js:dist/zone.min.js",
+    "@npm//node_modules/angular:angular.min.js",
 ]
 
 # This devserver is written in Go and is super-fast.
@@ -104,6 +108,7 @@ ts_devserver(
     data = [
         "//src/assets",
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
+        "@npm//node_modules/angular:angular.min.js",
     ],
     # Start from the development version of the main
     entry_module = "angular_bazel_example/src/main.dev",
@@ -125,7 +130,7 @@ ts_devserver(
     # The corresponding <script> or <link> tags will be injected into the index_html
     static_files = _ASSETS,
     # Tell Bazel to build the sources first
-    deps = ["//src"],
+    deps = ["//src", "//src/app/angularjs"],
 )
 
 # This list is auto-updated by /tools/generator
@@ -158,11 +163,13 @@ rollup_bundle(
     entry_point = "src/main.prod",
     deps = [
         "//src",
+        "//src/app/angularjs",
         "@npm//@angular/common",
         "@npm//@angular/core",
         "@npm//@angular/material",
         "@npm//@angular/platform-browser",
         "@npm//@angular/router",
+        "@npm//@angular/upgrade",
         "@npm//@ngrx/store",
         "@npm//rxjs",
     ],
@@ -185,10 +192,12 @@ web_package(
     data = [
         ":bundle",
         "//src/assets",
+        "//src/app/angularjs",
         # Include polyfills that will be requested by old browsers
         "@npm//node_modules/systemjs:dist/system.js",
         "@npm//node_modules/core-js:client/core.min.js",
         "index.html",
+        "@npm//node_modules/angular:angular.min.js",
     ],
     # <script> and <link> tags will be automatically injected into this index.
     index_html = "//src/example:assets",

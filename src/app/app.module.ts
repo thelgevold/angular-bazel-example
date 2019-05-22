@@ -1,4 +1,3 @@
-
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -12,6 +11,7 @@ import {BillingModule} from './billing/billing.module';
 import {ComputeModule} from './compute/compute.module';
 import {DatastoreModule} from './datastore/datastore.module';
 import {FunctionsModule} from './functions/functions.module';
+import {HelloWorldComponent} from './hello-world/hello-world.component';
 import {HomeModule} from './home/home';
 import {LoggingModule} from './logging/logging.module';
 import {MonitoringModule} from './monitoring/monitoring.module';
@@ -23,14 +23,26 @@ import {todoReducer} from './todos/reducers/reducers';
 
 @NgModule({
   declarations: [AppComponent],
+  entryComponents: [HelloWorldComponent],
   imports: [
-    AppRoutingModule, BrowserModule, BrowserAnimationsModule, MaterialModule, HomeModule,
-    StoreModule.forRoot({todoReducer}), BillingModule, ComputeModule, DatastoreModule,
-    FunctionsModule, LoggingModule, MonitoringModule, NetworkingModule, RegistryModule,
-    StorageModule, SupportModule
-  ],
-  exports: [AppComponent],
-  bootstrap: [AppComponent],
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    HomeModule,
+    StoreModule.forRoot({ todoReducer }),
+    BillingModule,
+    ComputeModule,
+    DatastoreModule,
+    FunctionsModule,
+    LoggingModule,
+    MonitoringModule,
+    NetworkingModule,
+    RegistryModule,
+    StorageModule,
+    SupportModule
+  ]
 })
 export class AppModule {
+  ngDoBootstrap() {}
 }
